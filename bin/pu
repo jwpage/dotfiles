@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+cd `git root`
+phpunit
+cd $ORIG

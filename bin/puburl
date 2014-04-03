@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+
+// Get Public URL location
+
+$user_id = 15436350;
+$dropbox_public = realpath($_SERVER['HOME'].'/Dropbox/Public/');
+$file = str_replace($dropbox_public, '', realpath($argv[1]));
+echo "http://dl.dropbox.com/u/$user_id".$file;

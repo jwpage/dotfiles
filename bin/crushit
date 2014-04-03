@@ -1,0 +1,9 @@
+#!/bin/sh
+for png in `find $1 -name "*.png"`;
+do
+    echo "crushing $png"    
+    pngcrush "$png" temp.png
+    mv -f temp.png $png
+    #read -p "Press enter to continue"
+
+done;

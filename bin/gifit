@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+INFILE=${1-~/Documents/Untitled.mov}
+OUTFILE=~/Documents/Untitled.gif
+PUBFILE=~/Dropbox/Public/screenshots/Screencast-`date +"%Y.%m.%d-%H.%M"`.gif
+
+if [ ! -f $INFILE ]
+then
+    exit 1
+fi
+
+ffmpeg -i $INFILE -pix_fmt rgb24 -r 10 -f gif  -loglevel quiet - | gifsicle --optimize=3 --delay=3 > $OUTFILE &&
+mv $OUTFILE $PUBFILE
+trash $INFILE
+OUTPUT=`puburl $PUBFILE`
+echo -n $OUTPUT | pbcopy
+echo $OUTPUT

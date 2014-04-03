@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+cd `git root`
+LATEST=`gfind . -name "*Test.php" -type f -printf '%T@ %p\n' | sort -k 1nr | sed 's/^[^ ]* //' | head -1`
+phpunit $LATEST
+cd $ORIG
