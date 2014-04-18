@@ -1,0 +1,82 @@
+set exrc
+set secure
+
+filetype plugin on
+
+syntax enable
+set backspace=indent,eol,start
+set nolist                "Show invisible chars
+set showmatch           "Show matching brackets.
+set binary noeol        "Don't add EOL markers to new files.
+set noeol               "Same thing.
+set ignorecase          "Case insensitive searching
+set nofoldenable	    "Ew code folding
+set smartcase           "Case sensitive if search has CAPS
+set gdefault            " don't need /g after :s or :g
+set nocompatible        "Don't run in compatibile mode, duh.
+set autoindent          "Autoindent my code.
+set history=1000        "Set history to 1000 lines.
+set hlsearch            "Highlight search terms
+set viminfo='20,"200,:20,%,n~/.viminfo    "Let vim registers be up to 200lines long.
+set t_Co=256            "256 colours for awesome
+set laststatus=2		"Always show status bar
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set backupdir=/tmp
+
+" Jump to start and end of line using the home row keys
+map H ^
+map L $
+
+" Persist undo
+set undodir=/tmp/vim/undo
+set undofile
+set undolevels=1000
+set undoreload=10000
+
+
+if has("autocmd")
+    " When eidting a file, always jump to the last cursor position
+    autocmd BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif 
+
+    " 2-space tabs for Ruby
+    autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+    autocmd Filetype haml setlocal ts=2 sts=2 sw=2
+    autocmd Filetype scss setlocal ts=2 sts=2 sw=2
+    autocmd Filetype sass setlocal ts=2 sts=2 sw=2
+    autocmd BufNewFile,BufRead *.erb setfiletype ruby
+    autocmd BufNewFile,BufRead *.css setfiletype css
+    autocmd BufNewFile,BufRead *.hjs setfiletype handlebars 
+endif
+
+" TAB SETTINGS - 4 SPACES
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+
+
+let mapleader = ","
+nmap <leader>r :!phpunit %<cr>
+nmap <leader><space> :noh<cr>
+
+
+" Making insert/normal caret look different in iTerm
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+
+set background=dark
+color Monokai
+set colorcolumn=81
+highlight ColorColumn ctermbg=darkgrey guibg=#33333
+set nowrap
+
+nmap <leader>a= :Tabularize /=<CR>
+vmap <leader>a= :Tabularize /=<CR>
+nmap <leader>a> :Tabularize /=><CR>
+vmap <leader>a> :Tabularize /=><CR>
+imap <leader>v  <ESC>"+p`]a
+nmap <leader>v  <ESC>"+p`]a
+map  <leader>T  :!clear && pu -c $(git root)/phpunit.xml.dist<CR>
+map  <leader>t  :!clear && pu -c $(git root)/phpunit.xml.dist %<CR>
+nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>

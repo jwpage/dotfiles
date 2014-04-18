@@ -1,0 +1,7 @@
+--type-set=html=.tpl
+--type-add=html=.tpl
+--smart-case
+--ignore-dir=build
+--ignore-dir=vendors
+--ignore-dir=libraries
+--ignore-dir=cache

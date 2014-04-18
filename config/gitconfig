@@ -1,0 +1,23 @@
+# Set your name and email with the following:
+#   git config -f ~/.gitconfig.local user.name John Appleseed
+#   git config -f ~/.gitconfig.local user.email me@example.com
+
+[alias]
+co = checkout
+st = status -sb
+ci = commit -v
+root = rev-parse --show-toplevel
+exec = "!exec "
+
+[color]
+ui = auto
+
+[core]
+excludesfile = ~/.gitignore
+autocrlf = input
+
+[apply]
+whitespace = nowarn
+
+[push]
+default = current

@@ -1,0 +1,30 @@
+# handles updating fresh
+fresh freshshell/fresh bin/fresh --bin
+
+fresh https://jwpage@bitbucket.org/jwpage/dotfiles.git bin/\* --bin
+
+# config files
+fresh jasoncodes/dotfiles config/gemrc --file
+fresh config/\* --file
+
+# vim files
+fresh-options --file=~/.vimrc --marker=\"
+    fresh twe4ked/dotfiles vim/vundle_before.vim
+    fresh vim/vundle.vim
+    fresh twe4ked/dotfiles vim/vundle_after.vim
+    fresh vim/vimrc
+fresh-options
+
+fresh-options --file=~/.zshrc --marker
+    fresh twe4ked/dotfiles shell/zsh/completion.zsh
+    fresh shell/zsh/prompt.zsh
+    fresh twe4ked/dotfiles shell/zsh/title.zsh
+    fresh shell/zsh/config.zsh
+
+    fresh freshshell/fresh contrib/source-build.sh
+fresh-options
+
+
+fresh shell/exports.sh
+fresh shell/aliases/\*
+fresh jasoncodes/dotfiles shell/editor.sh
