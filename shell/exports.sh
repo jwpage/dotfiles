@@ -6,7 +6,7 @@ path_add() {
 
 export DEVELOPMENT="true"
 export DOTFILES=~/.dotfiles
-export GREP_OPTIONS='--color-auto'
+export GREP_OPTIONS='--color=auto'
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 path_add "/usr/local/sbin"
