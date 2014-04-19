@@ -17,13 +17,22 @@ fresh-options
 
 fresh-options --file=~/.zshrc --marker
     fresh twe4ked/dotfiles shell/zsh/completion.zsh
-    #fresh git/git contrib/completion/git-completion.zsh --ref=880111c11befaaf070e8ea1021bf11b4fb58c461
+    fresh zsh-users/zsh-history-substring-search zsh-history-substring-search.zsh
+
     fresh shell/zsh/prompt.zsh
     fresh twe4ked/dotfiles shell/zsh/title.zsh
     fresh shell/zsh/config.zsh
 
+
     fresh freshshell/fresh contrib/source-build.sh
 fresh-options
+
+fresh git/git contrib/completion/git-completion.zsh --file=completion/_git
+fresh zsh-users/zsh-completions src/_artisan --file=completion/_artisan
+fresh zsh-users/zsh-completions src/_brew --file=completion/_brew
+fresh zsh-users/zsh-completions src/_composer --file=completion/_composer
+fresh zsh-users/zsh-completions src/_jekyll --file=completion/_jekyll
+
 
 
 fresh shell/exports.sh
