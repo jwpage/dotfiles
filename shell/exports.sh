@@ -11,4 +11,5 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 path_add "/usr/local/sbin"
 path_add "/usr/local/Cellar/coreutils/8.21/libexec/gnubin"
+path_add "/usr/local/Cellar/ruby/2.1.0/bin"
 path_add "~/.composer/vendor/bin"
