@@ -1,3 +1,4 @@
+Bundle "scrooloose/syntastic"
 Bundle "godlygeek/csapprox"
 Bundle "sickill/vim-monokai"
 Bundle "godlygeek/tabular"

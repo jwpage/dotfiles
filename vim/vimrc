@@ -59,6 +59,8 @@ let mapleader = ","
 nmap <leader>r :!phpunit %<cr>
 nmap <leader><space> :noh<cr>
 
+let g:syntastic_php_checkers = ['php']
+
 
 " Making insert/normal caret look different in iTerm
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
