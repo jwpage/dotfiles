@@ -28,7 +28,6 @@ fresh-options --file=~/.zshrc --marker
 fresh-options
 
 fresh git/git contrib/completion/git-completion.zsh --file=completion/_git
-fresh shell/zsh/git.zsh --file=completion/_git
 fresh zsh-users/zsh-completions src/_artisan --file=completion/_artisan
 fresh zsh-users/zsh-completions src/_brew --file=completion/_brew
 fresh zsh-users/zsh-completions src/_composer --file=completion/_composer
