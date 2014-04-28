@@ -10,6 +10,7 @@ st = status -sb
 ci = commit -v
 root = rev-parse --show-toplevel
 exec = "!exec "
+latest = for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/
 
 [color]
 ui = auto
