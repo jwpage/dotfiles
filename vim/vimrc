@@ -60,6 +60,7 @@ nmap <leader>r :!phpunit %<cr>
 nmap <leader><space> :noh<cr>
 
 let g:syntastic_php_checkers = ['php']
+let g:syntastic_html_checkers = []
 
 
 " Making insert/normal caret look different in iTerm
