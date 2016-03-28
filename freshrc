@@ -29,9 +29,8 @@ fresh-options
 
 fresh git/git contrib/completion/git-completion.zsh --file=completion/_git
 fresh zsh-users/zsh-completions src/_artisan --file=completion/_artisan
-fresh zsh-users/zsh-completions src/_brew --file=completion/_brew
+fresh Homebrew/homebrew Library/Contributions/brew_zsh_completion.zsh --file=completion/_brew
 fresh zsh-users/zsh-completions src/_composer --file=completion/_composer
-fresh zsh-users/zsh-completions src/_jekyll --file=completion/_jekyll
 
 
 

@@ -29,7 +29,7 @@ setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share 
 setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
 setopt HIST_REDUCE_BLANKS
 
-zstyle ':completion:*:*:git:*' script /usr/local/Cellar/git/2.1.2/etc/bash_completion.d/git-completion.bash
+zstyle ':completion:*:*:git:*' script /usr/local/Cellar/git/2.7.4/etc/bash_completion.d/git-completion.bash
 
 # don't expand aliases _before_ completion has finished
 #   like: git comm-[tab]
