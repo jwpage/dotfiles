@@ -69,7 +69,7 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 
 set background=dark
-color monokai
+colorscheme solarized
 set colorcolumn=81
 highlight ColorColumn ctermbg=darkgrey guibg=#33333
 set nowrap

@@ -24,3 +24,7 @@ whitespace = nowarn
 
 [push]
 default = current
+
+[user]
+    email = jwpage@gmail.com
+    name = Johnson Page
