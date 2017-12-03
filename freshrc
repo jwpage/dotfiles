@@ -9,9 +9,9 @@ fresh config/\* --file
 
 # vim files
 fresh-options --file=~/.vimrc --marker=\"
-    fresh twe4ked/dotfiles vim/vundle_before.vim
+    fresh vim/vundle_before.vim
     fresh vim/vundle.vim
-    fresh twe4ked/dotfiles vim/vundle_after.vim
+    fresh vim/vundle_after.vim
     fresh vim/vimrc
 fresh-options
 
@@ -27,9 +27,8 @@ fresh-options --file=~/.zshrc --marker
     fresh freshshell/fresh contrib/source-build.sh
 fresh-options
 
-fresh git/git contrib/completion/git-completion.zsh --file=completion/_git
+fresh zsh-users/zsh-completions src/_ack --file=completion/_ack
 fresh zsh-users/zsh-completions src/_artisan --file=completion/_artisan
-fresh Homebrew/homebrew Library/Contributions/brew_zsh_completion.zsh --file=completion/_brew
 fresh zsh-users/zsh-completions src/_composer --file=completion/_composer
 
 
