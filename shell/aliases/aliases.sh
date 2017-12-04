@@ -3,8 +3,8 @@ alias dc='cd'
 alias ..='cd ..'
 alias history='fc -l 1'
 alias sl='ls'
-alias php56='sudo brew services stop php70; brew unlink php70; brew link php56; sudo brew services start php56; valet install'
-alias php70='sudo brew services stop php56; brew unlink php56; brew link php70; sudo brew services start php70; valet install'
+alias php56='sudo brew services stop php71; brew unlink php71; brew link php56; sudo brew services start php56; valet install'
+alias php71='sudo brew services stop php56; brew unlink php56; brew link php71; sudo brew services start php71; valet install'
 
 notify() {
     msg=${1:=Done}
