@@ -3,5 +3,7 @@
 --smart-case
 --ignore-dir=build
 --ignore-dir=vendors
+--ignore-dir=vendor
 --ignore-dir=libraries
 --ignore-dir=cache
+--ignore-dir=storage

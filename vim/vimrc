@@ -17,7 +17,7 @@ set nocompatible        "Don't run in compatibile mode, duh.
 set autoindent          "Autoindent my code.
 set history=1000        "Set history to 1000 lines.
 set hlsearch            "Highlight search terms
-set viminfo='20,"200,:20,%,n~/.viminfo    "Let vim registers be up to 200lines long.
+set viminfo='200,"2000,:200,%,n~/.viminfo    "Let vim registers be up to 200lines long.
 set t_Co=256            "256 colours for awesome
 set laststatus=2		"Always show status bar
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
@@ -60,6 +60,7 @@ nmap <leader>r :!phpunit %<cr>
 nmap <leader><space> :noh<cr>
 
 let g:syntastic_php_checkers = ['php']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_html_checkers = []
 
 
@@ -68,12 +69,14 @@ let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 
-set background=dark
+set background=light
 let g:solarized_termcolors=256
-colorscheme solarized
+
+
 set colorcolumn=81
-highlight ColorColumn ctermbg=darkgrey guibg=#33333
 set nowrap
+hi Search ctermbg=LightYellow
+hi Search ctermfg=Red
 
 nmap <leader>a= :Tabularize /=<CR>
 vmap <leader>a= :Tabularize /=<CR>

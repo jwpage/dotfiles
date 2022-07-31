@@ -5,3 +5,8 @@ Bundle "tpope/vim-markdown"
 Bundle "xsbeats/vim-blade"
 Bundle "docteurklein/php-getter-setter.vim"
 Bundle "altercation/vim-colors-solarized"
+Bundle "elmcast/elm-vim"
+Bundle "hzchirs/vim-material"
+Bundle "hashivim/vim-terraform"
+Bundle 'christoomey/vim-titlecase'
+Bundle 'pangloss/vim-javascript'

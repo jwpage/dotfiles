@@ -18,6 +18,7 @@ git_dirty() {
     else
       echo "%{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%}"
     fi
+    echo -e "\n"
   fi
 }
 

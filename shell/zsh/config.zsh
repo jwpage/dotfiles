@@ -49,3 +49,7 @@ bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
 bindkey '^[[H'  beginning-of-line #home
 bindkey '^[[F'  end-of-line		  #end
+
+export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
+source ~/.dotfiles/shell/zsh/zsh-z.plugin.zsh
